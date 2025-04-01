@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-5 and A-5</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #0056a6;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        
+        .header-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .header-subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .booking-form {
+            background-color: white;
+            border-radius: 5px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .form-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #0056a6;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        select, input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .search-btn {
+            background-color: #f37022;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        
+        .search-btn:hover {
+            background-color: #e05d1a;
+        }
+        
+        .train-info {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .info-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            min-width: 120px;
+            color: #555;
+        }
+        
+        .info-value {
+            flex: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .form-group {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-title">Indian Railways</div>
+            <div class="header-subtitle">Safety | Security | Punctuality</div>
+        </header>
+        
+        <div class="booking-form">
+            <h2 class="form-title">Book Your Ticket</h2>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>From Station</label>
+                    <select>
+                        <option>Bangalore (KSR)</option>
+                        <option>Delhi (NDLS)</option>
+                        <option>Mumbai (CSTM)</option>
+                        <option>Chennai (MAS)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>To Station</label>
+                    <select>
+                        <option>Kasaragod (KBD)</option>
+                        <option>Bangalore (KSR)</option>
+                        <option>Mangalore (MAJN)</option>
+                        <option>Kochi (ERS)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Journey Date</label>
+                    <input type="text" value="01 Aug 2023 (Tuesday)" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label>Class</label>
+                    <select>
+                        <option>3A - AC 3 Tier</option>
+                        <option>SL - Sleeper Class</option>
+                        <option>2A - AC 2 Tier</option>
+                        <option>1A - AC First Class</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Quota</label>
+                    <select>
+                        <option>Tatkal</option>
+                        <option>General</option>
+                        <option>Premium Tatkal</option>
+                        <option>Ladies</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Train Type</label>
+                    <select>
+                        <option>All Classes</option>
+                        <option>Superfast</option>
+                        <option>Express</option>
+                        <option>Passenger</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button class="search-btn">Search Trains</button>
+        </div>
+        
+        <div class="train-info">
+            <div class="info-item">
+                <div class="info-label">From:</div>
+                <div class="info-value">Bangalore (KSR)</div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-label">To:</div>
+                <div class="info-value">Kasaragod (KBD)</div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-label">Date:</div>
+                <div class="info-value">01 Aug 2023 (Tuesday)</div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-label">Class:</div>
+                <div class="info-value">3A - AC 3 Tier</div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-label">Quota:</div>
+                <div class="info-value">Tatkal</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-4 & A-4</title>
+    <style>
+        :root {
+            --primary: #6072e7;
+            --secondary: #353d60;
+            --accent: #F72585;
+            --text: #2B2D42;
+            --light: #FFFFFF;
+            --gray: #4c586c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background-color: #F8F9FA;
+            padding: 40px 20px;
+        }
+        
+        .pricing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        
+        .pricing-card {
+            background: var(--light);
+            border-radius: 8px;
+            width: 262px;
+            height: 363px;
+            padding: 32px;
+            box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .plan-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text);
+            padding: 4px 8px;
+            gap: 10px;
+            /* margin-bottom: 8px; */
+        }
+        
+        .plan-description {
+            font-size: 14px;
+            color: var(--gray);
+            gap: 10px;
+            padding: 0 8px;
+            /* margin-bottom: 16px; */
+        }
+        
+        .plan-price {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--text);
+            padding: 0 8px;
+            margin: 8px 0;
+            gap: 10px;
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin: 8px 0;
+            padding-left: 8px;
+            flex-grow: 1;
+        }
+        
+        .plan-features li {
+            padding: 8px 0;
+            color: var(--text);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .subscribe-button {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 12px 0;
+            margin: 12px 0;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+        
+        .subscribe-button:hover {
+            background: var(--primary);
+        }
+        
+        .basic{
+            background: var(--secondary);
+        }
+
+        .base{
+            color: white;
+        }
+
+        .based{
+            color: rgb(71, 70, 70);
+            background-color: white;
+        }
+
+        /* .pro-plan {
+            border-top: 3px solid var(--accent);
+        } */
+        
+        @media (max-width: 768px) {
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .pricing-card {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+                margin-bottom: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pricing-container">
+       
+        <!-- Free Plan -->
+        <div class="pricing-card">
+            
+            <h2 class="plan-name">Free Plan</h2>
+            <p class="plan-description">For personal</p>
+            <div class="plan-price">$0</div>
+            <ul class="plan-features">
+                <li><span style='font-size:14px;'>&#9989;1 users</span></li>
+                <li><span style='font-size:14px;'>&#9989;4 Web mails</span></li>
+                <li><span style='font-size:14px;'>&#9989;Responsive Website</span></li>
+                <li><span style='font-size:14px;'>&#9989;Free SSL</span></li>
+                <button class="subscribe-button">Subscribe now</button>
+            </ul>
+            
+        </div>
+        
+        <!-- Basic Plan -->
+        <div class="pricing-card basic">
+            <h2 class="plan-name base">Basic Plan</h2>
+            <p class="plan-description base">For small business</p>
+            <div class="plan-price base">$29</div>
+            <ul class="plan-features">
+                <li><span class="base" style='font-size:14px;'>&#9989;10 Web mails</span></li>
+                <li><span class="base" style='font-size:14px;'>&#9989;Responsive Website</span></li>
+                <li><span class="base" style='font-size:14px;'>&#9989;Free SSL</span></li>
+                <li><span class="base" style='font-size:14px;'>&#9989;4 users</span></li>
+                <button class="subscribe-button based">Subscribe now</button>
+            </ul>
+        </div>
+        
+        <!-- Pro Plan -->
+        <div class="pricing-card pro-plan">
+            <h2 class="plan-name">Pro Plan</h2>
+            <p class="plan-description">For enterprise</p>
+            <div class="plan-price">$49</div>
+            <ul class="plan-features">
+                <li><span style='font-size:14px;'>&#9989;Unlimited users</span></li>
+                <li><span style='font-size:14px;'>&#9989;Unlimited Web mails</span></li>
+                <li><span style='font-size:14px;'>&#9989;Responsive Website</span></li>
+                <li><span style='font-size:14px;'>&#9989;Free SSL + SEO</span></li>
+                <button class="subscribe-button">Subscribe now</button>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
